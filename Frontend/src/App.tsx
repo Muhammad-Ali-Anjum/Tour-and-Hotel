@@ -1,9 +1,9 @@
+import AdminDashboard from "./components/AdminDashboard";
 
-import Dashboards from './components/Dashboards'
 const Dashboard = () => {
 
   return (
-    <Dashboards/>
+    <AdminDashboard/>
   )
 }
 export default Dashboard;
