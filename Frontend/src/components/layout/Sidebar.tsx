@@ -39,7 +39,7 @@ const Sidebar: React.FC = () => {
       </div>
 
       <nav className="mt-4">
-        <NavItem icon={<LayoutDashboard size={18} />} label="Dashboard" active />
+        <NavItem icon={<LayoutDashboard size={18} />} label="Dashboard"  active />
         <NavItem icon={<Package size={18} />} label="Packages" />
         <NavItem icon={<Briefcase size={18} />} label="Custom Packages" />
         <NavItem icon={<Calendar size={18} />} label="Bookings" />
