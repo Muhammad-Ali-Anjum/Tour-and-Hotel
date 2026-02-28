@@ -1,5 +1,5 @@
 import apiClient from '../apiClient';
-import { Package } from '../../features/packages/types';
+import type { Package } from '../../features/packages/types';
 
 export const fetchPackages = () => apiClient.get<Package[]>('/packages');
 export const createPackage = (data: Omit<Package, 'id'>) => apiClient.post('/packages', data);

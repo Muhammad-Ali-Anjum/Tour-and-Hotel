@@ -1,6 +1,16 @@
 import { Table } from '../../../components/common/Table';
+import type { User } from '../types'; // if you have a User type defined; otherwise define locally
 
-const users = [
+// If you don't have a User type yet, uncomment this interface:
+// interface User {
+//   id: number;
+//   name: string;
+//   email: string;
+//   role: string;
+//   status: string;
+// }
+
+const users: User[] = [
   { id: 1, name: 'Ahmed Khan', email: 'ahmed@example.com', role: 'Customer', status: 'Active' },
   { id: 2, name: 'Admin User', email: 'admin@example.com', role: 'Admin', status: 'Active' },
 ];
@@ -14,7 +24,7 @@ const columns = [
   {
     header: 'Actions',
     accessor: 'id',
-    cell: (_, row) => (
+    cell: (_value: number, row: User) => (
       <div className="flex space-x-2">
         <button className="text-blue-600 hover:underline">View Profile</button>
         {row.status === 'Active' ? (

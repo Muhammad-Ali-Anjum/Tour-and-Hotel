@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export const StatusConfiguration = () => {
-  const [statuses, setStatuses] = useState(['Pending', 'Confirmed', 'Cancelled']);
+  const [statuses, _setStatuses] = useState(['Pending', 'Confirmed', 'Cancelled']);
 
   return (
     <div className="bg-white p-6 rounded-lg shadow max-w-2xl">
@@ -9,7 +9,6 @@ export const StatusConfiguration = () => {
       <ul className="list-disc pl-5">
         {statuses.map(s => <li key={s}>{s}</li>)}
       </ul>
-      {/* Add/remove status UI */}
     </div>
   );
 };

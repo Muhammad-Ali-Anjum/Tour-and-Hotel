@@ -1,24 +1,11 @@
-// export interface HotelPartner {
-//   id: number;
-//   name: string;
-//   email: string;
-//   phone?: string;
-//   hotels: number[]; // hotel ids
-//   status: 'Active' | 'Inactive';
-//   permissions: {
-//     canEditHotels: boolean;
-//     canViewBookings: boolean;
-//   };
-// }
-
 export interface HotelPartner {
   id: number;
   name: string;
   email: string;
   phone?: string;
-  hotels: number[];                 // array of hotel IDs
+  hotels: number[];
   status: 'Active' | 'Inactive';
-  permissions: {                     // make sure this is included
+  permissions: {
     canEditHotels: boolean;
     canViewBookings: boolean;
   };

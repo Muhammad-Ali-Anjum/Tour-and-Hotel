@@ -3,10 +3,10 @@ import { useParams } from 'react-router-dom';
 
 export const PackageImages = () => {
   const { id } = useParams();
-  const [images, setImages] = useState<string[]>(['img1.jpg', 'img2.jpg']);
+  const [images, _setImages] = useState<string[]>(['img1.jpg', 'img2.jpg']);
 
-  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // Handle file upload
+  const handleUpload = (_e: React.ChangeEvent<HTMLInputElement>) => {
+    // File upload logic will go here – you'll use _setImages to update state
   };
 
   return (

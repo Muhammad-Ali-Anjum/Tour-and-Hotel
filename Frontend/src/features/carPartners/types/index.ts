@@ -3,6 +3,6 @@ export interface CarPartner {
   name: string;
   email: string;
   phone?: string;
-  cars: number[];
+  cars: number[];        // array of car IDs
   status: 'Active' | 'Inactive';
 }

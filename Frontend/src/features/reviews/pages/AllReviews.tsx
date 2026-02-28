@@ -1,6 +1,16 @@
 import { Table } from '../../../components/common/Table';
 
-const reviews = [
+// Define the Review type (adjust fields as needed)
+interface Review {
+  id: number;
+  user: string;
+  item: string;
+  rating: number;
+  comment: string;
+  status: string;
+}
+
+const reviews: Review[] = [
   { id: 1, user: 'Ali', item: 'Skardu Explorer', rating: 4, comment: 'Great!', status: 'Published' },
 ];
 
@@ -14,7 +24,8 @@ const columns = [
   {
     header: 'Actions',
     accessor: 'id',
-    cell: (_, row) => (
+    // Explicitly type the parameters
+    cell: (_value: number, _row: Review) => (
       <button className="text-red-600 hover:underline">Delete</button>
     ),
   },

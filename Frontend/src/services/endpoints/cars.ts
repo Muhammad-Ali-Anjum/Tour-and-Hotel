@@ -1,6 +1,5 @@
 import apiClient from '../apiClient';
-// import { Car } from '../../features/cars/types';
-import {Car} from '../../features/cars/types'
+import type {Car} from '../../features/cars/types'
 
 export const fetchCars = () => apiClient.get<Car[]>('/cars');
 export const createCar = (data: Omit<Car, 'id'>) => apiClient.post('/cars', data);

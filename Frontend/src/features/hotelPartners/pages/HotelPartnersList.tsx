@@ -1,5 +1,5 @@
 import { Table } from '../../../components/common/Table';
-import { HotelPartner } from '../types';
+import type { HotelPartner } from '../types';
 
 const partners: HotelPartner[] = [
   {
@@ -27,13 +27,13 @@ const columns = [
   {
     header: 'Hotels',
     accessor: 'hotels',
-    cell: (value: number[]) => value.length, // now correctly typed
+    cell: (value: number[]) => value.length,
   },
   { header: 'Status', accessor: 'status' },
   {
     header: 'Actions',
     accessor: 'id',
-    cell: (_value: number, row: HotelPartner) => (
+    cell: (_value: number, _row: HotelPartner) => (
       <div className="flex space-x-2">
         <button className="text-blue-600 hover:underline">View Hotels</button>
         <button className="text-green-600 hover:underline">Access Control</button>

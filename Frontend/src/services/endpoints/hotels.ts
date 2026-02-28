@@ -1,5 +1,5 @@
 import apiClient from '../apiClient';
-import { Hotel } from '../../features/hotels/types';
+import type { Hotel } from '../../features/hotels/types';
 
 export const fetchHotels = () => apiClient.get<Hotel[]>('/hotels');
 export const createHotel = (data: Omit<Hotel, 'id'>) => apiClient.post('/hotels', data);

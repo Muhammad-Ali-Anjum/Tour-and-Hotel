@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { DashboardPage } from '../features/dashboard/DashboardPage';
 import { AllPackages } from '../features/packages/pages/AllPackages';
 import { AddPackage } from '../features/packages/pages/AddPackage';

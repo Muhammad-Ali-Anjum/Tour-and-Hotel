@@ -1,5 +1,5 @@
 import apiClient from '../apiClient';
-import { Booking } from '../../features/bookings/types';
+import type { Booking } from '../../features/bookings/types';
 
 export const fetchBookings = () => apiClient.get<Booking[]>('/bookings');
 export const fetchBooking = (id: number) => apiClient.get<Booking>(`/bookings/${id}`);

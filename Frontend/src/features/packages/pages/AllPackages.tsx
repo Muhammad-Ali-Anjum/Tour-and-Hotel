@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Table } from '../../../components/common/Table';
+import type { Package } from '../types';
 
-const packagesData = [
+const packagesData: Package[] = [
   { id: 1, name: 'Skardu Explorer', duration: '5 days', price: '$950', status: 'Active' },
   { id: 2, name: 'Hunza Valley Tour', duration: '7 days', price: '$1200', status: 'Active' },
   { id: 3, name: 'Swat Hiking', duration: '3 days', price: '$400', status: 'Inactive' },
@@ -26,11 +27,11 @@ const columns = [
   {
     header: 'Actions',
     accessor: 'id',
-    cell: (_, row) => (
+    cell: (_value: number, row: Package) => (
       <div className="flex space-x-2">
         <Link to={`/packages/${row.id}`} className="text-blue-600 hover:underline">View</Link>
-        <button className="text-green-600 hover:underline">Edit</button>
-        <button className="text-red-600 hover:underline">Delete</button>
+        <Link to={`/packages/${row.id}/images`} className="text-green-600 hover:underline">Images</Link>
+        <Link to={`/packages/${row.id}/capacity`} className="text-purple-600 hover:underline">Capacity</Link>
       </div>
     ),
   },
