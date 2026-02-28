@@ -1,14 +1,38 @@
-import { BrowserRouter } from 'react-router-dom';
-import { AppRoutes } from './routes/AppRoutes';
-// import { MainLayout } from './components/layout/MainLayout';
-import { MainLayout } from './components/layout/MainLayout';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { DashboardLayout } from './layouts/DashboardLayout';
+// import { routes } from './routes';
+
+// function App() {
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={<DashboardLayout />}>
+//           {routes.map((route) => (
+//             <Route key={route.path} path={route.path} element={route.element} />
+//           ))}
+//         </Route>
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
+
+// export default App;
+
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { DashboardLayout } from './layouts/DashboardLayout';
+import { routes } from './routes';
 
 function App() {
   return (
     <BrowserRouter>
-      <MainLayout>
-        <AppRoutes />
-      </MainLayout>
+      <Routes>
+        <Route path="/" element={<DashboardLayout />}>
+          {routes.map((route) => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }
