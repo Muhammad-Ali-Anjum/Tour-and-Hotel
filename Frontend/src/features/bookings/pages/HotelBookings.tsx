@@ -1,7 +1,17 @@
 import { Table } from '../../../components/common/Table';
 
-// Mock data – replace with API call
-const bookings = [
+// Define a type for a hotel booking
+interface HotelBooking {
+  id: number;
+  guest: string;
+  hotel: string;
+  checkIn: string;
+  checkOut: string;
+  status: string;
+}
+
+// Now type the bookings array
+const bookings: HotelBooking[] = [
   { id: 1, guest: 'Ahmed Khan', hotel: 'Mountain View Resort', checkIn: '2024-06-01', checkOut: '2024-06-05', status: 'Confirmed' },
   { id: 2, guest: 'Sarah Ali', hotel: 'Deluxe Hunza Hotel', checkIn: '2024-06-10', checkOut: '2024-06-15', status: 'Pending' },
   { id: 3, guest: 'John Doe', hotel: 'Swat Valley Inn', checkIn: '2024-05-20', checkOut: '2024-05-25', status: 'Cancelled' },
@@ -29,7 +39,8 @@ const columns = [
   {
     header: 'Actions',
     accessor: 'id',
-    cell: (_, row) => (
+    // Explicitly type the parameters
+    cell: (_value: number, _row: HotelBooking) => (
       <div className="flex space-x-2">
         <button className="text-blue-600 hover:underline">Update Status</button>
         <button className="text-green-600 hover:underline">Payment</button>

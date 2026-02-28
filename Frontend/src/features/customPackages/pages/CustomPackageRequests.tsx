@@ -1,6 +1,16 @@
 import { Table } from '../../../components/common/Table';
 
-const requests = [
+// Define the type inline to match your data exactly
+interface CustomPackageRequest {
+  id: number;
+  user: string;
+  destination: string;
+  activities: string;
+  estimatedPrice: string;
+  status: string;
+}
+
+const requests: CustomPackageRequest[] = [
   { id: 1, user: 'Ali Raza', destination: 'Skardu', activities: 'Luxury Hotel', estimatedPrice: '$950', status: 'Pending' },
   { id: 2, user: 'Hamza Ahmed', destination: 'Hunza', activities: 'Hunza', estimatedPrice: '$1,050', status: 'Pending' },
   { id: 3, user: 'Sara Khan', destination: 'Swat', activities: 'Swat, Narah', estimatedPrice: '$800', status: 'Approved' },
@@ -24,13 +34,20 @@ const columns = [
   {
     header: 'Actions',
     accessor: 'id',
-    cell: (_, row) => (
-      <div className="flex space-x-2">
-        <button className="text-blue-600 hover:underline">View</button>
-        <button className="text-green-600 hover:underline">Approve</button>
-        <button className="text-red-600 hover:underline">Reject</button>
-      </div>
-    ),
+    // cell: (_value: number, row: CustomPackageRequest) => (
+    //   <div className="flex space-x-2">
+    //     <button className="text-blue-600 hover:underline">View</button>
+    //     <button className="text-green-600 hover:underline">Approve</button>
+    //     <button className="text-red-600 hover:underline">Reject</button>
+    //   </div>
+    // ),
+    cell: (_value: number, _row: CustomPackageRequest) => (
+  <div className="flex space-x-2">
+    <button className="text-blue-600 hover:underline">View</button>
+    <button className="text-green-600 hover:underline">Approve</button>
+    <button className="text-red-600 hover:underline">Reject</button>
+  </div>
+),
   },
 ];
 

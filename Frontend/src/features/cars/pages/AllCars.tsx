@@ -1,7 +1,17 @@
+
+
 import { Link } from 'react-router-dom';
 import { Table } from '../../../components/common/Table';
 
-const cars = [
+interface Car {
+  id: number;
+  model: string;
+  plate: string;
+  owner: string;
+  status: string;
+}
+
+const cars: Car[] = [
   { id: 1, model: 'Toyota Corolla', plate: 'ABC-123', owner: 'John Doe', status: 'Available' },
   { id: 2, model: 'Honda Civic', plate: 'XYZ-789', owner: 'Jane Smith', status: 'Booked' },
 ];
@@ -15,7 +25,7 @@ const columns = [
   {
     header: 'Actions',
     accessor: 'id',
-    cell: (_, row) => (
+    cell: (_value: number, row: Car) => (
       <div className="flex space-x-2">
         <Link to={`/cars/${row.id}`} className="text-blue-600 hover:underline">View</Link>
         <Link to={`/cars/${row.id}/availability`} className="text-green-600 hover:underline">Availability</Link>
