@@ -21,16 +21,20 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { DashboardLayout } from './layouts/DashboardLayout';
+import Tables from './services/Table/Tables';
 import { routes } from './routes';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Tables />}>
         <Route path="/" element={<DashboardLayout />}>
+
           {routes.map((route) => (
             <Route key={route.path} path={route.path} element={route.element} />
           ))}
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
