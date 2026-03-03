@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom';
 
 export const BookingDetails = () => {
   const { id } = useParams();
-  // Mock data
   const booking = {
     id,
     user: 'Ahmed Khan',

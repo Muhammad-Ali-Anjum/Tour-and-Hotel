@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom';
 
 export const CustomPackageDetails = () => {
   const { id } = useParams();
-  // Mock data
   const request = {
     id,
     user: 'Ali Raza',

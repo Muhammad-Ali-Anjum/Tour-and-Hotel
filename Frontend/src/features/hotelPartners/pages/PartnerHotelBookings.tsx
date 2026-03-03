@@ -10,7 +10,6 @@ interface PartnerHotelBooking {
   status: string;
 }
 
-// Now type the array explicitly
 const bookings: PartnerHotelBooking[] = [];
 
 const columns = [

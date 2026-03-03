@@ -1,6 +1,5 @@
 import { Table } from '../../../components/common/Table';
 
-// Define a type for a hotel booking
 interface HotelBooking {
   id: number;
   guest: string;
@@ -10,7 +9,6 @@ interface HotelBooking {
   status: string;
 }
 
-// Now type the bookings array
 const bookings: HotelBooking[] = [
   { id: 1, guest: 'Ahmed Khan', hotel: 'Mountain View Resort', checkIn: '2024-06-01', checkOut: '2024-06-05', status: 'Confirmed' },
   { id: 2, guest: 'Sarah Ali', hotel: 'Deluxe Hunza Hotel', checkIn: '2024-06-10', checkOut: '2024-06-15', status: 'Pending' },
@@ -39,7 +37,6 @@ const columns = [
   {
     header: 'Actions',
     accessor: 'id',
-    // Explicitly type the parameters
     cell: (_value: number, _row: HotelBooking) => (
       <div className="flex space-x-2">
         <button className="text-blue-600 hover:underline">Update Status</button>

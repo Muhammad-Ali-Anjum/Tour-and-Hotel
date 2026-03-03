@@ -1,6 +1,5 @@
 import { Table } from '../../../components/common/Table';
 
-// Define the type inline to match your data exactly
 interface CustomPackageRequest {
   id: number;
   user: string;
@@ -34,13 +33,7 @@ const columns = [
   {
     header: 'Actions',
     accessor: 'id',
-    // cell: (_value: number, row: CustomPackageRequest) => (
-    //   <div className="flex space-x-2">
-    //     <button className="text-blue-600 hover:underline">View</button>
-    //     <button className="text-green-600 hover:underline">Approve</button>
-    //     <button className="text-red-600 hover:underline">Reject</button>
-    //   </div>
-    // ),
+   
     cell: (_value: number, _row: CustomPackageRequest) => (
   <div className="flex space-x-2">
     <button className="text-blue-600 hover:underline">View</button>

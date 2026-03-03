@@ -6,7 +6,6 @@ export const PartnerHotelDetails = () => {
     <div className="bg-white p-6 rounded-lg shadow">
       <h1 className="text-2xl font-bold mb-4">Hotel Details (Partner {partnerId})</h1>
       <p>Hotel ID: {hotelId}</p>
-      {/* Display hotel info */}
     </div>
   );
 };
