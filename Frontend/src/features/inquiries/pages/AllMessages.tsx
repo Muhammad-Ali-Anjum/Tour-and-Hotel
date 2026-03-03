@@ -1,6 +1,5 @@
 import { Table } from '../../../components/common/Table';
 
-// Define a type for contact messages
 interface ContactMessage {
   id: number;
   user: string;
@@ -22,7 +21,6 @@ const columns = [
   {
     header: 'Actions',
     accessor: 'id',
-    // Explicitly type parameters; prefix unused parameter with underscore
     cell: (_value: number, _row: ContactMessage) => (
       <button className="text-blue-600 hover:underline">View</button>
     ),
