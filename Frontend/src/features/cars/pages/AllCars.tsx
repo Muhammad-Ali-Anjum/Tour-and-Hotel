@@ -1,5 +1,4 @@
 
-
 import { Link } from 'react-router-dom';
 import { Table } from '../../../components/common/Table';
 

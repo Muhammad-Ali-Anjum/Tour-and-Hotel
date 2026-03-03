@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { fetchPackages } from '../../services/endpoints/packages';
-import { Package } from '../../features/packages/types';
+import type { Package } from '../../features/packages/types';
 
 interface PackagesState {
   items: Package[];
